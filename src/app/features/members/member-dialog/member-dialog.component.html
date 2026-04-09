@@ -1,0 +1,43 @@
+<h2 mat-dialog-title>{{data ? 'Edit Member' :'Add Member'}}</h2>
+<div mat-dialog-content>
+    <form [formGroup]="memberForm" class="form">
+
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Domain</mat-label>
+            <input matInput formControlName="domain">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Member Class</mat-label>
+            <input matInput formControlName="member_class">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Date Joined</mat-label>
+            <input type="date" matInput formControlName="date_joined">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Level</mat-label>
+            <input type="number" matInput formControlName="level">
+        </mat-form-field>
+
+          <mat-form-field appearance="outline">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option value="Active">Active</mat-option>
+        <mat-option value="Inactive">Inactive</mat-option>
+      </mat-select>
+    </mat-form-field>
+    </form>
+</div>
+
+<div mat-dialog-actions align="end">
+<button mat-button (click)="close()">Cancel</button>
+<button mat-raised-button color="primary" (click)="save()">Save</button>
+</div>
