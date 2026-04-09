@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
- private API = 'http://localhost:3000/api/members'
+ private API = 'https://demo-task-backend-x2qt.onrender.com/api/members'
   constructor(private http:HttpClient) { }
 
   getMembers(page:number,limit:number):Observable<any>{
